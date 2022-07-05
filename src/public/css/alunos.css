@@ -1,0 +1,17 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+button {
+    display: block;
+}
+
+.bloco {
+    text-align: center;
+    width: 20%;
+    margin: 1rem;
+    border: solid 1px white;
+    border-radius: 5px;
+    display: inline-block;
+}

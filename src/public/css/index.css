@@ -1,0 +1,41 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+a {
+    margin: 0.5rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.formulario {
+    margin: 1rem auto;
+    width: 40%;
+}
+
+input {
+    margin: 0.5rem 0;
+    border: solid 1px ;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: block;
+}
+
+button {
+    border: solid 1px ;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: orange;
+}
+
+button:hover {
+    cursor: pointer;
+}
