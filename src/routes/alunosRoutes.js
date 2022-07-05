@@ -12,6 +12,5 @@ const route = express.Router()
 route
     .get('/alunos', mostrarPagina)
     .get('/alunos/info', exibirAlunos)
-    .get('/alunos/falta', addFalta)
 
 export default route
