@@ -23,9 +23,23 @@ function alunosController () {
         })
     }
 
+    const addFalta = (req, res) => {
+        const listaAlunos = alunos.find((error, data) => {
+            if (error) {
+                res.status(500).send({mensagem: error})
+            } else {
+                res.status(200).send(listaAlunos)
+                return data
+            }
+        })
+
+        console.log(listaAlunos)
+    }
+
     return {
         mostrarPagina,
-        exibirAlunos
+        exibirAlunos,
+        addFalta
     }
 }
 
