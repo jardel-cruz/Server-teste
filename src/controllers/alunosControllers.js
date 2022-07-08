@@ -10,15 +10,11 @@ function alunosController () {
     }
 
     const exibirAlunos = (req, res) => {
-        alunos.find((error, data) => {
+        alunos.find({nome: /./i }, 'nome idade faltas', (error, data) => {
             if (error) {
                 res.status(500).send({mensagem: error})
             } else {
-                const objAluno = data.map(({nome, idade, faltas}) => {
-                    const temp = {nome: nome, idade: idade, faltas: faltas}
-                    return temp
-                })
-                res.status(200).send(objAluno)
+                res.status(200).send(data)
             }
         })
     }
