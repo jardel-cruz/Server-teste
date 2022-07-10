@@ -19,7 +19,7 @@ function alunosController () {
         })
     }
 
-    const exibirPorId = (req, res) => {
+    const exibirPorNome = (req, res) => {
         const { aluno } = req.params
         
         alunos.find({ nome: aluno }, 'nome idade faltas', (error, data) => {
@@ -47,7 +47,7 @@ function alunosController () {
     return {
         mostrarPagina,
         exibirAlunos,
-        exibirPorId,
+        exibirPorNome,
         adicionarFalta
     }
 }
