@@ -1,17 +1,19 @@
 import alunos from "../models/alunosModels.js"
 
- const addAluno = (req, res) => {
+ const addAluno = async (req, res) => {
     const {nome, idade, faltas} = req.body
-    const aluno = alunos(
+
+    const novoAluno = alunos(
         {
             nome: nome,
             idade: idade,
             faltas: faltas
         }
     )
-    aluno.save((error) => {
+
+    novoAluno.save((error) => {
         if (error) {
-            res.status(500).send({mens: error})
+            res.status(500).send({mensagem: error})
         } else {
             res.status(302).redirect('/')
         }
