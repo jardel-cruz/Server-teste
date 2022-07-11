@@ -1,19 +1,12 @@
 import express from 'express'
-import alunosController from '../controllers/alunosControllers.js'
-
-const {
-    mostrarPagina,
-    exibirAlunos,
-    exibirPorNome,
-    adicionarFalta
-} = alunosController()
+import AlunosController from '../controllers/alunosControllers.js'
 
 const route = express.Router()
 
 route
-    .get('/alunos', mostrarPagina)
-    .get('/alunos/info', exibirAlunos)
-    .get('/alunos/info/:aluno', exibirPorNome)
-    .post('/alunos/info/:aluno', adicionarFalta)
+    .get('/alunos', AlunosController.mostrarPagina)
+    .get('/alunos/info', AlunosController.exibirAlunos)
+    .get('/alunos/info/:aluno', AlunosController.exibirPorNome)
+    .post('/alunos/info/:aluno', AlunosController.adicionarFalta)
 
 export default route
